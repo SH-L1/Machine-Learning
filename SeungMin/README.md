@@ -11,4 +11,5 @@ data.drop(columns=['00시하차총승객수','00시승차총승객수'],inplace=
 for i in range(1,24):
   data[f'{i}시순하차']=abs(data[f'{i}시하차총승객수']-data[f'{i}시승차총승객수'])
   data.drop(columns=[f'{i}시하차총승객수',f'{i}시승차총승객수'],inplace=True,axis=1)
+data['사용년월'] = pd.to_datetime(data['사용년월'].astype(str), format='%Y%m')
 ```
