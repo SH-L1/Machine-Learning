@@ -93,6 +93,24 @@ for k in range(1,10000):
 
 ```
 <br>
+<img src="https://github.com/SH-L1/Machine-Learning/blob/main/image/%E1%84%89%E1%85%B5%E1%86%AF%E1%84%85%E1%85%AE%E1%84%8B%E1%85%A6%E1%86%BA%E1%84%80%E1%85%A8%E1%84%89%E1%85%AE.png" width="600" height="300"/>
+<br><br>
+
+```py
+# 엘보우기법
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+test2=[]
+for i in range(5001, 10001):
+    if not i % 50 ==0:
+      continue
+    kmeans = KMeans(n_clusters=i, init='k-means++', max_iter=300, n_init=10, random_state=42)
+    kmeans.fit(coords_km)
+    test2.append(kmeans.inertia_)
+```
+<br>
+<img src="https://github.com/SH-L1/Machine-Learning/blob/main/image/%E1%84%8B%E1%85%A6%E1%86%AF%E1%84%87%E1%85%A9%E1%84%8B%E1%85%AE%E1%84%80%E1%85%B5%E1%84%87%E1%85%A5%E1%86%B8.png"/>
+<br><br>
 
 ### 4.모델 평가
   - RMSLE -> 회귀 평가
