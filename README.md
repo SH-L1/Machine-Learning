@@ -113,7 +113,11 @@ for i in range(5001, 10001):
 ```
 <br>
 <img src="https://github.com/SH-L1/Machine-Learning/blob/main/image/%E1%84%8B%E1%85%A6%E1%86%AF%E1%84%87%E1%85%A9%E1%84%8B%E1%85%AE%E1%84%80%E1%85%B5%E1%84%87%E1%85%A5%E1%86%B8.png"/>
+<br>
+
+### 적절한 K값 -> 5015
 <br><br>
+
 
 ### 4.모델 평가
   - RMSLE -> 회귀 평가
