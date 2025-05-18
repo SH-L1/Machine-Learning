@@ -60,6 +60,7 @@ for month in range(1, 13):
   - 최종 학습할 데이터셋의 독립변수 -> 시간대별 순하차 인원,날씨,공휴일,성별매출,연령별 매출,요일별 매출  종속변수-> 매출
   - 선형회귀,랜덤포레스트,XGBoost,GBM 각각 4가지 사용하여 학습진행(교차검증) -> 바로 평가하는게 아닌 독립변수로 다시 묶어줘야함 -> 묶어준 독립변수로 다시 선형회귀 학습 진행(스택킹)
 ##### 군집화(각각 역의 좌표들을 학습해서 군집화 실행. 군집들과 매출 상권의 이름을 사용해서 맵핑)
+##### 실루엣계수
 ```py
 # 군집화 하기 전 최적의 k값 찾는 과정-실루엣계수
 import pandas as pd
@@ -96,6 +97,7 @@ for k in range(1,10000):
 <img src="https://github.com/SH-L1/Machine-Learning/blob/main/image/%E1%84%89%E1%85%B5%E1%86%AF%E1%84%85%E1%85%AE%E1%84%8B%E1%85%A6%E1%86%BA%E1%84%80%E1%85%A8%E1%84%89%E1%85%AE.png" width="600" height="300"/>
 <br><br>
 
+##### 엘보우기법
 ```py
 # 엘보우기법
 import matplotlib.pyplot as plt
