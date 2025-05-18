@@ -59,7 +59,39 @@ for month in range(1, 13):
 ### 3.모델학습
   - 최종 학습할 데이터셋의 독립변수 -> 시간대별 순하차 인원,날씨,공휴일,성별매출,연령별 매출,요일별 매출  종속변수-> 매출
   - 선형회귀,랜덤포레스트,XGBoost,GBM 각각 4가지 사용하여 학습진행(교차검증) -> 바로 평가하는게 아닌 독립변수로 다시 묶어줘야함 -> 묶어준 독립변수로 다시 선형회귀 학습 진행(스택킹)
-  - 군집화(각각 역의 좌표들을 학습해서 군집화 실행. 군집들과 매출 상권의 이름을 사용해서 맵핑)
+##### 군집화(각각 역의 좌표들을 학습해서 군집화 실행. 군집들과 매출 상권의 이름을 사용해서 맵핑)
+```py
+# 군집화 하기 전 최적의 k값 찾는 과정-실루엣계수
+import pandas as pd
+import numpy as np
+import math
+from sklearn.cluster import KMeans
+
+file = pd.read_csv('/content/drive/MyDrive/역_버스정류장_위치_정보.csv', encoding='cp949')
+
+latitudes = file['위도'].to_numpy()
+longitudes = file['경도'].to_numpy()
+coords = np.vstack((latitudes, longitudes)).T
+
+mean_lat = latitudes.mean()
+lat_km = coords[:, 0] * 111.0
+lon_km = coords[:, 1] * 111.0 * np.cos(np.radians(mean_lat))
+coords_km = np.vstack((lat_km, lon_km)).T
+coords_km
+
+test=[]
+from sklearn.metrics import silhouette_score
+from sklearn.cluster import KMeans
+for k in range(1,10000):
+    if not k%5==0:
+      continue
+    k_model = KMeans(n_clusters=k, random_state=42)
+    labels = k_model.fit_predict(coords_km)
+    score = silhouette_score(coords_km, labels)
+    test.append(score)
+    print(k/10001*100)
+
+```
 <br>
 
 ### 4.모델 평가
