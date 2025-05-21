@@ -117,7 +117,9 @@ for i in range(5001, 10001):
 
 ### 적절한 K값 -> 5015
 <br><br>
-
+### 승하차 인원과 당월 매출금액간에 상관관계 HeatMap
+<img src="https://github.com/SH-L1/Machine-Learning/blob/main/image/202401_%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%AA%E1%86%AB%E1%84%80%E1%85%AA%E1%86%AB%E1%84%80%E1%85%A8.png"/>
+<br>
 
 ### 4.모델 평가
   - RMSLE -> 회귀 평가
