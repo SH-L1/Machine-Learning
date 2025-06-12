@@ -1,0 +1,62 @@
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import GridSearchCV
+
+from sklearn.model_selection import train_test_split
+
+
+data=pd.read_csv('/content/drive/MyDrive/찐막데이터_2 (1).csv',encoding='cp949')
+
+# 1. 리스트를 1차원으로
+target_cols = [
+    '당월_매출_금액', '당월_매출_건수', '주중_매출_금액', '주말_매출_금액',
+    '월요일_매출_금액', '화요일_매출_금액', '수요일_매출_금액', '목요일_매출_금액', '금요일_매출_금액',
+    '토요일_매출_금액', '일요일_매출_금액', '시간대_00~06_매출_금액', '시간대_06~11_매출_금액',
+    '시간대_11~14_매출_금액', '시간대_14~17_매출_금액', '시간대_17~21_매출_금액', '시간대_21~24_매출_금액',
+    '남성_매출_금액', '여성_매출_금액', '연령대_10_매출_금액', '연령대_20_매출_금액',
+    '연령대_30_매출_금액', '연령대_40_매출_금액', '연령대_50_매출_금액', '연령대_60_이상_매출_금액',
+    '주중_매출_건수', '주말_매출_건수', '월요일_매출_건수', '화요일_매출_건수', '수요일_매출_건수',
+    '목요일_매출_건수', '금요일_매출_건수', '토요일_매출_건수', '일요일_매출_건수',
+    '시간대_건수~06_매출_건수', '시간대_건수~11_매출_건수', '시간대_건수~14_매출_건수',
+    '시간대_건수~17_매출_건수', '시간대_건수~21_매출_건수', '시간대_건수~24_매출_건수',
+    '남성_매출_건수', '여성_매출_건수', '연령대_10_매출_건수', '연령대_20_매출_건수',
+    '연령대_30_매출_건수', '연령대_40_매출_건수', '연령대_50_매출_건수', '연령대_60_이상_매출_건수'
+]
+
+# 2. 독립변수, 종속변수 분리
+X = data.drop(columns=target_cols)
+y = data[target_cols]
+
+# 3. 훈련/테스트셋 분리
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+
+# 1. 모델
+model = RandomForestRegressor()
+
+#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# 2. 하이퍼파라미터 그리드
+param_grid = {
+    'n_estimators': [100, 200],
+    'max_depth': [None, 10, 20],
+    'min_samples_split': [2, 5],
+    'min_samples_leaf': [1, 2],
+    'max_features': ['sqrt', 'log2']
+}
+
+
+# 3. Grid Search
+grid_search = GridSearchCV(
+    estimator=model,
+    param_grid=param_grid,
+    scoring='r2',
+    cv=5,
+    n_jobs=-1,
+    verbose=1
+)
+
+# 4. 학습
+grid_search.fit(X_train, y_train)
+
+# 5. 결과
+print("최적 파라미터:", grid_search.best_params_)
+print("최고 R2 점수:", grid_search.best_score_)
