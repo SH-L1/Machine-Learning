@@ -20,11 +20,9 @@ function App() {
         <Header />
         <div className="flex flex-1">
           <Sidebar />
-          <main className="flex-1 p-6 bg-white overflow-y-auto">
+          <main className="flex-1 p-6 bg-white overflow-y-auto ml-48 mt-16">
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/inventory" element={<Inventory />} />
-                <Route path="/" element={<Dashboard />} />
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/stock-status" element={<StockStatus />} />
               <Route path="/cluster-analysis" element={<ClusterAnalysis />} />
@@ -40,7 +38,6 @@ function App() {
                   </>
                 }
               />
-              {/* 다른 경로들도 여기에 추가 */}
             </Routes>
           </main>
         </div>
