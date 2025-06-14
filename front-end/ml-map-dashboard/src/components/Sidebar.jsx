@@ -12,7 +12,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="bg-gray-100 w-48 h-full p-4 shadow">
+    <aside className="bg-gray-100 w-48 fixed top-16 left-0 h-[calc(100vh-4rem)] p-4 shadow overflow-y-auto">
       <ul className="space-y-3">
         {menu.map((item, idx) => (
           <li key={idx}>
