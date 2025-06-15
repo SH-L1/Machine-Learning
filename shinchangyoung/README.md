@@ -130,7 +130,7 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 
 ## 🧠 인사이트 예시
 
-### 클러스터 100 (가양2동)
+### 가양2동
 
 - 평균연령: 서울 2위 (50~60대 중심)  
 - 매출에 영향 주는 변수:  
@@ -162,6 +162,43 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 | 매출 예측 결과 제공 | 해당 지역군의 월별 예측 매출 표시 |
 | 연령 기반 인사이트 | 연령대-매출 상관 분석 기반 맞춤 전략 제공 |
 | 관리자 UI (향후 확장) | 지역/요일별 인력 추천, 재고관리 예측 추가 예정 |
+
+
+**사용자위치 위치 포함한 군집 시각화**
+  <img src="https://github.com/user-attachments/assets/7d8c2c98-3164-4e25-8dfb-792da7fa881b" width="600"/>
+
+---
+
+**클러스터 기반 지역분석 상관관계 시각화**
+  <img src="https://github.com/user-attachments/assets/53b17ae3-bc73-4a3b-92df-52d2dbdb97a2" width="600"/>
+
+---
+
+**클러스터 기반 지역분석 변수 중요도 시각화**
+  <img src="https://github.com/user-attachments/assets/8bfa3e36-6e81-434a-a9a5-ef8dda693edb" width="600"/>
+
+---
+
+**클러스터 기반 지역분석을 통한 인사이트 제공**
+  <img src="https://github.com/user-attachments/assets/d9339edf-cead-4407-8970-bc3022845ac1" width="600"/>
+
+---
+
+**인사이트 기반 제고관리**
+  <img src="https://github.com/user-attachments/assets/664fcf20-5fa7-4524-9554-16eb1f87f17b" width="600"/>
+
+---
+
+**인사이트 기반 제고관리**
+  <img src="https://github.com/user-attachments/assets/664fcf20-5fa7-4524-9554-16eb1f87f17b" width="600"/>
+
+---
+
+**인사이트 기반 제고관리**
+  <img src="https://github.com/user-attachments/assets/82103138-959c-4064-bcf1-b207d9218341" width="600"/>
+
+---
+
 
 📷 *추천 이미지: 사용자 위치 기반 클러스터 맵 + 예측 UI 설계안*
 
