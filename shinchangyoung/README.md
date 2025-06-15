@@ -1,10 +1,10 @@
 # 📊 군집 기반 상권 매출 예측 플랫폼
 
 ## 👥 팀원
-- 신승민 
-- 신창영 
-- 임성훈 
-- 임지성 
+- 신승민  
+- 신창영  
+- 임성훈  
+- 임지성  
 
 ---
 
@@ -14,19 +14,19 @@
 본 프로젝트는 **유동인구, 날씨, 공휴일, 지역 연령대** 등 다양한 공공 데이터를 활용하여  
 **클러스터 기반의 월 매출 예측 모델**을 만들고, 자영업자에게 다음을 지원합니다:
 
-- ✔ 매출 예측
-- ✔ 재고 최적화
-- ✔ 인력 관리
-- ✔ 마케팅 전략 수립
+- ✔ 매출 예측  
+- ✔ 재고 최적화  
+- ✔ 인력 관리  
+- ✔ 마케팅 전략 수립  
 
 ---
 
 ## 🎯 핵심 목표
 
-1. **역 기반 지역 군집화** → 지역 단위 세분화
-2. **클러스터별 상권 매출 예측 모델 생성**
-3. **인사이트 제공** → 연령대, 요일별 수요 예측
-4. **자영업 지원형 웹 플랫폼 구축**
+1. **역 기반 지역 군집화** → 지역 단위 세분화  
+2. **클러스터별 상권 매출 예측 모델 생성**  
+3. **인사이트 제공** → 연령대, 요일별 수요 예측  
+4. **자영업 지원형 웹 플랫폼 구축**  
 
 ---
 
@@ -39,85 +39,92 @@
 | 날씨 | 초단기 실황 (온도, 강수 등) | 기상청 API |
 | 공휴일 | 연도별 공휴일 정보 | GitHub (holidays-kr) |
 | 역 위치 | 위경도 좌표 | 국토교통부, 한국철도공사 |
-| 연령 정보 | 지역별 평균 연령대 | 서울통계플랫폼
+| 연령 정보 | 지역별 평균 연령대 | 서울통계플랫폼 |
 
 ---
 
 ## ⚙️ 데이터 전처리 & 클러스터링
 
-⚙️ 데이터 전처리 & 클러스터링
-역 좌표 통합 (지하철 + 버스): 총 7,477개
-<img src="https://github.com/user-attachments/assets/d02fce3b-2e23-4b4e-bdd1-dc7d2b386dbb" align="left" width="600"/>
+### ✅ 역 좌표 통합 (지하철 + 버스): 총 7,477개  
+<img src="https://github.com/user-attachments/assets/d02fce3b-2e23-4b4e-bdd1-dc7d2b386dbb" width="600"/>
 
-<br clear="left"/>
-KMeans 클러스터링
+---
 
-📌 초기 K = 2550
-엘보우 + 실루엣계수를 통해서 K값을 2550개의 값으로 추정
-<img src="https://github.com/user-attachments/assets/7adebb16-a615-41c8-8bbe-2075bd0ac9ae" align="left" width="600"/>
+### ✅ KMeans 클러스터링
 
-<br clear="left"/>
-상관관계가 낮게 형성된 것이 발견됨
-<img src="https://github.com/user-attachments/assets/982e85b9-f30c-44ca-b2bb-35ea294afbf8" align="left" width="600"/>
+#### 📌 초기 K = 2550  
+엘보우 + 실루엣계수를 통해 K=2550으로 초기 추정  
+<img src="https://github.com/user-attachments/assets/7adebb16-a615-41c8-8bbe-2075bd0ac9ae" width="600"/>
 
-<br clear="left"/>
-📌 최적 K ≈ 259 → 상관관계 증가
-k값을 제거
-<img src="https://github.com/user-attachments/assets/b9436e17-430a-49e4-bbbe-d66f85100f07" align="left" width="600"/>
+#### 📌 상관관계가 낮게 형성됨  
+<img src="https://github.com/user-attachments/assets/982e85b9-f30c-44ca-b2bb-35ea294afbf8" width="600"/>
 
-<br clear="left"/>
-k값 제거 후, k=2550개보다 더 증가된 상관관계 확인
-<img src="https://github.com/user-attachments/assets/6410d254-32b1-4621-adc7-065ab1409dca" align="left" width="600"/>
+#### 📌 최적 K ≈ 259 → 상관관계 증가  
+K를 줄였을 때 상관관계가 증가  
+<img src="https://github.com/user-attachments/assets/b9436e17-430a-49e4-bbbe-d66f85100f07" width="600"/>
 
-<br clear="left"/>
--  **메인 테이블 구성:** 클러스터별 시간대 유동인구 + 상권 매출 + 날씨 + 공휴일
- ![image](https://github.com/user-attachments/assets/f969854c-c45c-44c2-89c5-5225f8e6b0a5)
+#### 📌 K값 제거 후 상관관계 비교  
+기존보다 높은 상관관계 확인됨  
+<img src="https://github.com/user-attachments/assets/6410d254-32b1-4621-adc7-065ab1409dca" width="600"/>
 
+---
+
+### ✅ 메인 테이블 구성  
+클러스터별 시간대 유동인구 + 상권 매출 + 날씨 + 공휴일  
+
+<img src="https://github.com/user-attachments/assets/f969854c-c45c-44c2-89c5-5225f8e6b0a5" width="600"/>
 
 ---
 
 ## 📈 모델링
 
-### 🔧 적용 알고리즘 시각화
-- **선형 회귀**
-- **RandomForest**
+### 🔧 적용 알고리즘
 
-<img src="https://github.com/user-attachments/assets/c1f77d51-f3ca-49ae-a9c2-0b48ffa565f9" align="left" width="600"/>
-최적의 파라미터
+- **선형 회귀 / RandomForest**
+  
+  최적의 파라미터 설정  
+  <img src="https://github.com/user-attachments/assets/c1f77d51-f3ca-49ae-a9c2-0b48ffa565f9" width="600"/>
 
+  실제값 - 예측값 시각화  
+  <img src="https://github.com/user-attachments/assets/5db7ca2f-771c-4f24-bc8e-771aec58b752" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/5db7ca2f-771c-4f24-bc8e-771aec58b752" align="left" width="600"/>
-(실제값 - 예측값) 시각화
-
+---
 
 - **XGBoost**
+  
+  최적의 파라미터  
+  <img src="https://github.com/user-attachments/assets/bd076ff7-1b60-4f7e-863e-f5439131d12c" width="600"/>
 
-<img src="https://github.com/user-attachments/assets/bd076ff7-1b60-4f7e-863e-f5439131d12c" align="left" width="600"/>
-최적의 파라미터
+---
 
+- **LightGBM**  
 
-- **LightGBM**
-<img src="https://github.com/user-attachments/assets/3c203a71-082d-4175-a216-5a323e1ce9a8" align="left" width="600"/>
-최적의 파라미터
+  최적의 파라미터  
+  <img src="https://github.com/user-attachments/assets/3c203a71-082d-4175-a216-5a323e1ce9a8" width="600"/>
 
-
+---
 
 ### 🔍 평가 지표
+
 - **RMSLE (Root Mean Squared Log Error)**  
 - 이상치 제거 후 **27% 성능 향상** (7.1 → 5.17)
 
-📷 *이미지 추천: 최종 발표 RMSLE 그래프, 예측 시각화*
+📷 *추천 시각화: RMSLE 비교 그래프, 모델별 예측 결과 시각화*
 
 ---
 
 ## 🧠 인사이트 예시
 
-- **클러스터 100 (가양2동)**  
-  - 평균연령: 서울 2위 (50~60대 중심)
-  - 매출에 영향 주는 변수: **60대 이상 비율**, **요일 (수요일)**  
-  → 해당 요일에 **재고 확대**, **메뉴 타겟팅**, **직원 증원** 추천
+### 클러스터 100 (가양2동)
 
-📷 *이미지 추천: 최종 발표 인사이트 도출 및 시각화 슬라이드*
+- 평균연령: 서울 2위 (50~60대 중심)  
+- 매출에 영향 주는 변수:  
+  - **60대 이상 비율**  
+  - **요일: 수요일**
+
+➡ 해당 요일에 **재고 확대**, **메뉴 타겟팅**, **직원 증원** 전략 추천
+
+📷 *추천 이미지: 클러스터별 변수 영향력 그래프*
 
 ---
 
@@ -139,11 +146,11 @@ k값 제거 후, k=2550개보다 더 증가된 상관관계 확인
 | 위치 기반 군집 조회 | 사용자의 위치를 입력 → 소속 클러스터 자동 할당 |
 | 매출 예측 결과 제공 | 해당 지역군의 월별 예측 매출 표시 |
 | 연령 기반 인사이트 | 연령대-매출 상관 분석 기반 맞춤 전략 제공 |
-| 관리자 UI (향후 확장) | 지역/요일별 인력 추천, 재고관리 예측 추가 예정
+| 관리자 UI (향후 확장) | 지역/요일별 인력 추천, 재고관리 예측 추가 예정 |
 
-📷 *이미지 추천: 최종 발표 사용자 위치 기반 시각화 및 UI 설계 페이지*
+📷 *추천 이미지: 사용자 위치 기반 클러스터 맵 + 예측 UI 설계안*
 
 ---
 
-## 📦 프로젝트 구조 (예시)
+## 📦 프로젝트 구조
 
