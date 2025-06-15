@@ -53,7 +53,7 @@
 ### ✅ KMeans 클러스터링
 
 #### 📌 최적 K = 259 
-k값이 올라갈수록 적정한 값이 K = 259의 최적의 값을 도출
+k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌표가 벌어질수록 데이터삭제가 많이 일어나기 때문에 벌어지기직전의 적정한 값이 K = 259의 최적의 값이라는걸 도출
 <img src="https://github.com/user-attachments/assets/b9436e17-430a-49e4-bbbe-d66f85100f07" width="600"/>
 
 
@@ -62,13 +62,13 @@ k값이 올라갈수록 적정한 값이 K = 259의 최적의 값을 도출
 ㅏ=259의 값을 낮춘결과 상관관계가 높게나오는걸 확인할 수 있었음 
 <img src="https://github.com/user-attachments/assets/f2761d05-d3a4-4327-ada3-fcf3ec9c6b1a" width="600"/>
 
-
 ---
 
 ### ✅ 메인 테이블 구성  
 클러스터별 시간대 유동인구 + 상권 매출 + 날씨 + 공휴일  
 
-<img src="https://github.com/user-attachments/assets/f969854c-c45c-44c2-89c5-5225f8e6b0a5" width="600"/>
+<img src="https://github.com/user-attachments/assets/e8e0565d-0854-4921-9e31-7db2fd9d1662" width="1000"/>
+
 
 ---
 
