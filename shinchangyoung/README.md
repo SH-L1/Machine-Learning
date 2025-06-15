@@ -71,18 +71,36 @@ k값 제거 후, k=2550개보다 더 증가된 상관관계 확인
 
 <br clear="left"/>
 -  **메인 테이블 구성:** 클러스터별 시간대 유동인구 + 상권 매출 + 날씨 + 공휴일
+ ![image](https://github.com/user-attachments/assets/f969854c-c45c-44c2-89c5-5225f8e6b0a5)
 
 
 ---
 
 ## 📈 모델링
 
-### 🔧 적용 알고리즘
+### 🔧 적용 알고리즘 시각화
 - **선형 회귀**
 - **RandomForest**
+
+<img src="https://github.com/user-attachments/assets/c1f77d51-f3ca-49ae-a9c2-0b48ffa565f9" align="left" width="600"/>
+최적의 파라미터
+
+
+<img src="https://github.com/user-attachments/assets/5db7ca2f-771c-4f24-bc8e-771aec58b752" align="left" width="600"/>
+(실제값 - 예측값) 시각화
+
+
 - **XGBoost**
+
+<img src="https://github.com/user-attachments/assets/bd076ff7-1b60-4f7e-863e-f5439131d12c" align="left" width="600"/>
+최적의 파라미터
+
+
 - **LightGBM**
-- **Stacking (Ensemble)**
+<img src="https://github.com/user-attachments/assets/3c203a71-082d-4175-a216-5a323e1ce9a8" align="left" width="600"/>
+최적의 파라미터
+
+
 
 ### 🔍 평가 지표
 - **RMSLE (Root Mean Squared Log Error)**  
