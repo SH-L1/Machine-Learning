@@ -200,7 +200,7 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 
 
 
-**인사이트 기반 제고관리**
+##인사이트 기반 제고관리
 
   <img src="https://github.com/user-attachments/assets/82103138-959c-4064-bcf1-b207d9218341" width="1000"/>
 
