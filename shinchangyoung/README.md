@@ -45,26 +45,31 @@
 
 ## ⚙️ 데이터 전처리 & 클러스터링
 
-- **역 좌표 통합 (지하철 + 버스):** 총 7,477개
-![image](https://github.com/user-attachments/assets/d02fce3b-2e23-4b4e-bdd1-dc7d2b386dbb)
+⚙️ 데이터 전처리 & 클러스터링
+역 좌표 통합 (지하철 + 버스): 총 7,477개
+<img src="https://github.com/user-attachments/assets/d02fce3b-2e23-4b4e-bdd1-dc7d2b386dbb" align="left" width="600"/>
 
-- **KMeans 클러스터링**
+<br clear="left"/>
+KMeans 클러스터링
 
-- 초기 K = 2550
-![image](https://github.com/user-attachments/assets/7adebb16-a615-41c8-8bbe-2075bd0ac9ae)
+📌 초기 K = 2550
 엘보우 + 실루엣계수를 통해서 K값을 2550개의 값으로 추정
+<img src="https://github.com/user-attachments/assets/7adebb16-a615-41c8-8bbe-2075bd0ac9ae" align="left" width="600"/>
 
-![image](https://github.com/user-attachments/assets/982e85b9-f30c-44ca-b2bb-35ea294afbf8)
-상관관계가 낮게 형성된게 발견
+<br clear="left"/>
+상관관계가 낮게 형성된 것이 발견됨
+<img src="https://github.com/user-attachments/assets/982e85b9-f30c-44ca-b2bb-35ea294afbf8" align="left" width="600"/>
 
-- 최적 K ≈ 259 → 상관관계 증가
-![image](https://github.com/user-attachments/assets/b9436e17-430a-49e4-bbbe-d66f85100f07)
+<br clear="left"/>
+📌 최적 K ≈ 259 → 상관관계 증가
 k값을 제거
+<img src="https://github.com/user-attachments/assets/b9436e17-430a-49e4-bbbe-d66f85100f07" align="left" width="600"/>
 
-![image](https://github.com/user-attachments/assets/6410d254-32b1-4621-adc7-065ab1409dca)
-k값 제거후 k =2550개보다 더 증가된 상관관계 확인
+<br clear="left"/>
+k값 제거 후, k=2550개보다 더 증가된 상관관계 확인
+<img src="https://github.com/user-attachments/assets/6410d254-32b1-4621-adc7-065ab1409dca" align="left" width="600"/>
 
-
+<br clear="left"/>
 -  **메인 테이블 구성:** 클러스터별 시간대 유동인구 + 상권 매출 + 날씨 + 공휴일
 
 
