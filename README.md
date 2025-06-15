@@ -47,12 +47,12 @@
 > 🡆  K-Means로 군집화한 7477개의 역. 각 색상은 서로 다른 군집을 나타냄.
 
 
-<img src="https://github.com/user-attachments/assets/f72e22df-e922-4c57-b176-93ea6b648344" width="600"/>
+<img src="https://github.com/user-attachments/assets/8ee302bc-9193-4bc6-ab12-b76d7c083f7e" width="600"/>
 
 > 🡆  엘보우 기법을 사용한 inertia 분석. K값이 약 25 이상부터 효과 감소.
 
 
-<img src="https://github.com/user-attachments/assets/1507169e-d6a1-4a84-b0a8-1da70c4f2a85" width="600"/>
+<img src="https://github.com/user-attachments/assets/0fb1ebe7-b9e6-4745-ab5f-6634bff64a87" width="600"/>
 
 > 🡆  K값에 따른 실루엣 계수. 2550일 때 가장 높지만, 해석 가능성 낮음.
 
@@ -60,7 +60,7 @@
   - 최종 군집 수: K=259
   - 이유: 많은 군집을 통합하면서도 유의미한 상관관계 확보
 
-<img src="https://github.com/user-attachments/assets/0ad2a4c0-e216-4b2c-aa3b-04187b61466c" width="600"/>
+<img src="https://github.com/user-attachments/assets/a9217159-ac7c-41cc-bc7b-88a1c5b3dbce" width="600"/>
 
 > 🡆  최종 선정된 K=259일 때의 군집화 결과. 변수 간 상관관계 개선됨.
 
@@ -114,7 +114,24 @@
 
 <img src="https://github.com/user-attachments/assets/3a15c426-462a-4cf0-9356-352a3859c940" width="600"/>
 
-> 🡆  사용자 위치 기반 매출 예측 웹 인터페이스 시안
+> 🡆  메인화면 UI
+
+<img src="https://github.com/user-attachments/assets/019b9922-436b-44bc-beaa-2292432455cc" width="600"/>
+
+> 🡆  사용자 위치 군집
+
+<img src="https://github.com/user-attachments/assets/b73b428b-cd88-4ed0-b80d-eab39ff5ed89" width="600"/>
+
+> 🡆  클러스터 기반 지역분석을 통한 인사이트 제공
+
+<img src="https://github.com/user-attachments/assets/50798a3f-4219-4bd8-95e2-2b0ce6ab1bff" width="600"/>
+
+> 🡆  인사이트 기반 제고관리
+
+<img src="https://github.com/user-attachments/assets/b801722b-e357-47c9-bdc0-6d92d366c35a" width="600"/>
+
+> 🡆  인사이트 기반 인력관리
+
 
 ---
 
