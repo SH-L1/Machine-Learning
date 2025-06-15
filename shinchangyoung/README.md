@@ -83,11 +83,11 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 － 여러가지 조합을 시행해버고 가장 성능이 좋은 파라미터를 선택함
 
  
- ### 선형획귀
+ ### ✅ 선형획귀
   실제값 - 예측값 시각화  
   <img src="https://github.com/user-attachments/assets/8c028f59-92ae-4e8f-9531-d9f51942f24f" width="600"/>
 
-  ### RandomForest
+  ### ✅ RandomForest
   최적의 파라미터 설정  
   <img src="https://github.com/user-attachments/assets/c1f77d51-f3ca-49ae-a9c2-0b48ffa565f9" width="600"/>
 
@@ -96,7 +96,7 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 
 
 
- ### XGBoost
+ ### ✅ XGBoost
   
   최적의 파라미터  
   <img src="https://github.com/user-attachments/assets/bd076ff7-1b60-4f7e-863e-f5439131d12c" width="600"/>
@@ -106,7 +106,7 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 
 
 
- ### LightGBM
+ ### ✅ LightGBM
 
   최적의 파라미터  
   <img src="https://github.com/user-attachments/assets/056df880-aedb-48ae-beb5-57bea6fa0090" width="600"/>
@@ -115,7 +115,7 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
   <img src="https://github.com/user-attachments/assets/2ea05277-a691-464e-b707-93d614aa9dbe" width="600"/>
 
 
- ### 시각화한 선플롯 이상치를 제거
+ ### ✅ 시각화한 선플롯 이상치를 제거
 ![image](https://github.com/user-attachments/assets/82402d62-4880-4881-9f25-fef99c0e23c3)
 
 
