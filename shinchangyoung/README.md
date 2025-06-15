@@ -81,6 +81,12 @@ K를 줄였을 때 상관관계가 증가
 ### 🔧 적용 알고리즘
 
 - **RandomForest**
+  실제값 - 예측값 시각화  
+  <img src="https://github.com/user-attachments/assets/8c028f59-92ae-4e8f-9531-d9f51942f24f" width="600"/>
+
+---
+
+- **RandomForest**
   
   최적의 파라미터 설정  
   <img src="https://github.com/user-attachments/assets/c1f77d51-f3ca-49ae-a9c2-0b48ffa565f9" width="600"/>
@@ -107,6 +113,10 @@ K를 줄였을 때 상관관계가 증가
 
   실제값 - 예측값 시각화  
   <img src="https://github.com/user-attachments/assets/2ea05277-a691-464e-b707-93d614aa9dbe" width="600"/>
+
+---
+**시각화한 선플롯 이상치를 제거**
+![image](https://github.com/user-attachments/assets/82402d62-4880-4881-9f25-fef99c0e23c3)
 
 ---
 
