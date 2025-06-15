@@ -1,6 +1,6 @@
 # 📊 군집 기반 상권 매출 예측 플랫폼
 
-## 👥 팀원
+### 👥 팀원
 - 신승민  
 - 신창영  
 - 임성훈  
@@ -8,7 +8,7 @@
 
 ---
 
-## 🧩 프로젝트 개요
+### 🧩 프로젝트 개요
 
 최근 자영업 시장의 침체가 사회적 문제로 이어지고 있습니다.  
 본 프로젝트는 **유동인구, 날씨, 공휴일, 지역 연령대** 등 다양한 공공 데이터를 활용하여  
@@ -19,9 +19,9 @@
 - ✔ 인력 관리  
 - ✔ 마케팅 전략 수립  
 
---
+---
 
-## 🎯 핵심 목표
+### 🎯 핵심 목표
 
 1. **역 기반 지역 군집화** → 지역 단위 세분화  
 2. **클러스터별 상권 매출 예측 모델 생성**  
@@ -30,7 +30,7 @@
 
 ---
 
-## 📂 사용 데이터셋
+### 📂 사용 데이터셋
 
 | 데이터 | 설명 | 출처 |
 |--------|------|------|
@@ -43,59 +43,60 @@
 
 ---
 
-## ⚙️ 데이터 전처리 & 클러스터링
+# ⚙️ 데이터 전처리 & 클러스터링
 
-### ✅ 역 좌표 통합 (지하철 + 버스): 총 7,477개  
+## ✅ 역 좌표 통합 (지하철 + 버스): 총 7,477개  
 <img src="https://github.com/user-attachments/assets/d02fce3b-2e23-4b4e-bdd1-dc7d2b386dbb" width="600"/>
 
----
 
-### ✅ KMeans 클러스터링
 
-#### 📌 최적 K = 259 
+## ✅ KMeans 클러스터링
+
+### 📌 최적 K = 259 
 k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌표가 벌어질수록 데이터삭제가 많이 일어나기 때문에 
 벌어지기직전의 적정한 값이 K = 259의 최적의 값이라는걸 도출
 
 <img src="https://github.com/user-attachments/assets/b9436e17-430a-49e4-bbbe-d66f85100f07" width="600"/>
 
 
-#### 📌 초기 K = 2550 -> 최적 K = 259
+### 📌 초기 K = 2550 -> 최적 K = 259
 초기의 2550개는 산관관계가 낮게 나오는데 
 ㅏ=259의 값을 낮춘결과 상관관계가 높게나오는걸 확인할 수 있었음 
 
 <img src="https://github.com/user-attachments/assets/f2761d05-d3a4-4327-ada3-fcf3ec9c6b1a" width="600"/>
 
----
 
-### ✅ 메인 테이블 구성  
+
+## ✅ 메인 테이블 구성  
 클러스터별 시간대 유동인구 + 상권 매출 + 날씨 + 공휴일  
 
 <img src="https://github.com/user-attachments/assets/e8e0565d-0854-4921-9e31-7db2fd9d1662" width="1000"/>
 
 
----
 
-## 📈 모델링
+
+# 📈 모델링
 
 ### 🔧 적용 알고리즘
 
-- **RandomForest**
+ ### 📌 최적의 파라미터 탐색
+－ 여러가지 조합을 시행해버고 가장 성능이 좋은 파라미터를 선택함
+
+ 
+ ### ✅ 선형획귀
   실제값 - 예측값 시각화  
   <img src="https://github.com/user-attachments/assets/8c028f59-92ae-4e8f-9531-d9f51942f24f" width="600"/>
 
----
-
-- **RandomForest**
-  
+  ### ✅ RandomForest
   최적의 파라미터 설정  
   <img src="https://github.com/user-attachments/assets/c1f77d51-f3ca-49ae-a9c2-0b48ffa565f9" width="600"/>
 
   실제값 - 예측값 시각화  
   <img src="https://github.com/user-attachments/assets/5db7ca2f-771c-4f24-bc8e-771aec58b752" width="600"/>
 
----
 
-- **XGBoost**
+
+ ### ✅ XGBoost
   
   최적의 파라미터  
   <img src="https://github.com/user-attachments/assets/bd076ff7-1b60-4f7e-863e-f5439131d12c" width="600"/>
@@ -103,9 +104,9 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
   실제값 - 예측값 시각화  
   <img src="https://github.com/user-attachments/assets/c9fa5e8f-30d5-427e-9530-497c25658e6b" width="600"/>
 
----
 
-- **LightGBM**  
+
+ ### ✅ LightGBM
 
   최적의 파라미터  
   <img src="https://github.com/user-attachments/assets/056df880-aedb-48ae-beb5-57bea6fa0090" width="600"/>
@@ -113,11 +114,11 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
   실제값 - 예측값 시각화  
   <img src="https://github.com/user-attachments/assets/2ea05277-a691-464e-b707-93d614aa9dbe" width="600"/>
 
----
-**시각화한 선플롯 이상치를 제거**
+
+ ### ✅ 시각화한 선플롯 이상치를 제거
 ![image](https://github.com/user-attachments/assets/82402d62-4880-4881-9f25-fef99c0e23c3)
 
----
+
 
 ### 🔍 평가 지표
 
@@ -163,14 +164,14 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 | 연령 기반 인사이트 | 연령대-매출 상관 분석 기반 맞춤 전략 제공 |
 | 관리자 UI (향후 확장) | 지역/요일별 인력 추천, 재고관리 예측 추가 예정 |
 
+## 프로그램 UI 화면
+### 메인화면
 
-## 사용자위치 위치 포함한 군집 시각화
-
-  <img src="https://github.com/user-attachments/assets/7d8c2c98-3164-4e25-8dfb-792da7fa881b" width="1000"/>
+  <img src="https://github.com/user-attachments/assets/d1842847-5ab8-495c-b5ab-8fed3a30a02a" width="1000"/>
 
 
 
-## 클러스터 기반 지역분석 상관관계 시각화
+### 클러스터 기반 지역분석 상관관계 시각화
 
   <img src="https://github.com/user-attachments/assets/53b17ae3-bc73-4a3b-92df-52d2dbdb97a2" width="1000"/>
 
@@ -200,7 +201,7 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 
 
 
-###인사이트 기반 제고관리
+### 인사이트 기반 제고관리
 
   <img src="https://github.com/user-attachments/assets/82103138-959c-4064-bcf1-b207d9218341" width="1000"/>
 
