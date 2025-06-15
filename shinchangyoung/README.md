@@ -55,12 +55,14 @@
 #### 📌 최적 K = 259 
 k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌표가 벌어질수록 데이터삭제가 많이 일어나기 때문에 
 벌어지기직전의 적정한 값이 K = 259의 최적의 값이라는걸 도출
+
 <img src="https://github.com/user-attachments/assets/b9436e17-430a-49e4-bbbe-d66f85100f07" width="600"/>
 
 
 #### 📌 초기 K = 2550 -> 최적 K = 259
 초기의 2550개는 산관관계가 낮게 나오는데 
 ㅏ=259의 값을 낮춘결과 상관관계가 높게나오는걸 확인할 수 있었음 
+
 <img src="https://github.com/user-attachments/assets/f2761d05-d3a4-4327-ada3-fcf3ec9c6b1a" width="600"/>
 
 ---
