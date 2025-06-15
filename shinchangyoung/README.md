@@ -1,4 +1,4 @@
-# 📊 군집 기반 상권 매출 예측 플랫폼
+![image](https://github.com/user-attachments/assets/46bbc0e2-86ea-4e07-820a-9fb997dcca19)# 📊 군집 기반 상권 매출 예측 플랫폼
 
 ## 👥 팀원
 - 신승민  
@@ -165,9 +165,9 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 | 관리자 UI (향후 확장) | 지역/요일별 인력 추천, 재고관리 예측 추가 예정 |
 
 
-## 사용자위치 위치 포함한 군집 시각화
+## 메인화면
 
-  <img src="https://github.com/user-attachments/assets/7d8c2c98-3164-4e25-8dfb-792da7fa881b" width="1000"/>
+  <img src="https://github.com/user-attachments/assets/d1842847-5ab8-495c-b5ab-8fed3a30a02a" width="1000"/>
 
 
 
