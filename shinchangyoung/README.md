@@ -41,14 +41,14 @@
 | 역 위치 | 위경도 좌표 | 국토교통부, 한국철도공사 |
 | 연령 정보 | 지역별 평균 연령대 | 서울통계플랫폼 |
 
----
+
 
 ## ⚙️ 데이터 전처리 & 클러스터링
 
 ## ✅ 역 좌표 통합 (지하철 + 버스): 총 7,477개  
 <img src="https://github.com/user-attachments/assets/d02fce3b-2e23-4b4e-bdd1-dc7d2b386dbb" width="600"/>
 
----
+
 
 ## ✅ KMeans 클러스터링
 
@@ -65,7 +65,7 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 
 <img src="https://github.com/user-attachments/assets/f2761d05-d3a4-4327-ada3-fcf3ec9c6b1a" width="600"/>
 
----
+
 
 ## ✅ 메인 테이블 구성  
 클러스터별 시간대 유동인구 + 상권 매출 + 날씨 + 공휴일  
@@ -73,7 +73,7 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 <img src="https://github.com/user-attachments/assets/e8e0565d-0854-4921-9e31-7db2fd9d1662" width="1000"/>
 
 
----
+
 
 ## 📈 모델링
 
