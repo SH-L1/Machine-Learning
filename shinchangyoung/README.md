@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/46bbc0e2-86ea-4e07-820a-9fb997dcca19)# 📊 군집 기반 상권 매출 예측 플랫폼
-
 ## 👥 팀원
 - 신승민  
 - 신창영  
