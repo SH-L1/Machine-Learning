@@ -52,20 +52,16 @@
 
 ### ✅ KMeans 클러스터링
 
-#### 📌 초기 K = 2550  
-엘보우 + 실루엣계수를 통해 K=2550으로 초기 추정  
-<img src="https://github.com/user-attachments/assets/7adebb16-a615-41c8-8bbe-2075bd0ac9ae" width="600"/>
-
-#### 📌 상관관계가 낮게 형성됨  
-<img src="https://github.com/user-attachments/assets/982e85b9-f30c-44ca-b2bb-35ea294afbf8" width="600"/>
-
-#### 📌 최적 K ≈ 259 → 상관관계 증가  
-K를 줄였을 때 상관관계가 증가  
+#### 📌 최적 K = 259 
+k값이 올라갈수록 적정한 값이 K = 259의 최적의 값을 도출
 <img src="https://github.com/user-attachments/assets/b9436e17-430a-49e4-bbbe-d66f85100f07" width="600"/>
 
-#### 📌 K값 제거 후 상관관계 비교  
-기존보다 높은 상관관계 확인됨  
-<img src="https://github.com/user-attachments/assets/6410d254-32b1-4621-adc7-065ab1409dca" width="600"/>
+
+#### 📌 초기 K = 2550 -> 최적 K = 259
+초기의 2550개는 산관관계가 낮게 나오는데 
+ㅏ=259의 값을 낮춘결과 상관관계가 높게나오는걸 확인할 수 있었음 
+<img src="https://github.com/user-attachments/assets/f2761d05-d3a4-4327-ada3-fcf3ec9c6b1a" width="600"/>
+
 
 ---
 
