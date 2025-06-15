@@ -72,6 +72,11 @@
 - 2550개 군집 기반의 최종 통합 테이블
 - 메인 데이터셋 구축
 
+<img src="https://github.com/user-attachments/assets/3dc244dd-5e60-43ba-ad09-82d93da217e4" width="600"/>
+
+> 🡆  메인데이터셋
+
+
 ---
 
 ## 📉 예측 모델링
