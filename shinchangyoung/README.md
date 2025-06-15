@@ -86,7 +86,6 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
  ### 선형획귀
   실제값 - 예측값 시각화  
   <img src="https://github.com/user-attachments/assets/8c028f59-92ae-4e8f-9531-d9f51942f24f" width="600"/>
-  > 그림 1. 서울 시내 7477개 역의 분포를 지도 위에 시각화한 결과
 
   ### RandomForest
   최적의 파라미터 설정  
