@@ -19,7 +19,7 @@
 - ✔ 인력 관리  
 - ✔ 마케팅 전략 수립  
 
----
+--
 
 ## 🎯 핵심 목표
 
@@ -52,27 +52,26 @@
 
 ### ✅ KMeans 클러스터링
 
-#### 📌 초기 K = 2550  
-엘보우 + 실루엣계수를 통해 K=2550으로 초기 추정  
-<img src="https://github.com/user-attachments/assets/7adebb16-a615-41c8-8bbe-2075bd0ac9ae" width="600"/>
+#### 📌 최적 K = 259 
+k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌표가 벌어질수록 데이터삭제가 많이 일어나기 때문에 
+벌어지기직전의 적정한 값이 K = 259의 최적의 값이라는걸 도출
 
-#### 📌 상관관계가 낮게 형성됨  
-<img src="https://github.com/user-attachments/assets/982e85b9-f30c-44ca-b2bb-35ea294afbf8" width="600"/>
-
-#### 📌 최적 K ≈ 259 → 상관관계 증가  
-K를 줄였을 때 상관관계가 증가  
 <img src="https://github.com/user-attachments/assets/b9436e17-430a-49e4-bbbe-d66f85100f07" width="600"/>
 
-#### 📌 K값 제거 후 상관관계 비교  
-기존보다 높은 상관관계 확인됨  
-<img src="https://github.com/user-attachments/assets/6410d254-32b1-4621-adc7-065ab1409dca" width="600"/>
+
+#### 📌 초기 K = 2550 -> 최적 K = 259
+초기의 2550개는 산관관계가 낮게 나오는데 
+ㅏ=259의 값을 낮춘결과 상관관계가 높게나오는걸 확인할 수 있었음 
+
+<img src="https://github.com/user-attachments/assets/f2761d05-d3a4-4327-ada3-fcf3ec9c6b1a" width="600"/>
 
 ---
 
 ### ✅ 메인 테이블 구성  
 클러스터별 시간대 유동인구 + 상권 매출 + 날씨 + 공휴일  
 
-<img src="https://github.com/user-attachments/assets/f969854c-c45c-44c2-89c5-5225f8e6b0a5" width="600"/>
+<img src="https://github.com/user-attachments/assets/e8e0565d-0854-4921-9e31-7db2fd9d1662" width="1000"/>
+
 
 ---
 
@@ -131,7 +130,7 @@ K를 줄였을 때 상관관계가 증가
 
 ## 🧠 인사이트 예시
 
-### 클러스터 100 (가양2동)
+### 가양2동
 
 - 평균연령: 서울 2위 (50~60대 중심)  
 - 매출에 영향 주는 변수:  
@@ -163,6 +162,50 @@ K를 줄였을 때 상관관계가 증가
 | 매출 예측 결과 제공 | 해당 지역군의 월별 예측 매출 표시 |
 | 연령 기반 인사이트 | 연령대-매출 상관 분석 기반 맞춤 전략 제공 |
 | 관리자 UI (향후 확장) | 지역/요일별 인력 추천, 재고관리 예측 추가 예정 |
+
+
+**사용자위치 위치 포함한 군집 시각화**
+
+  <img src="https://github.com/user-attachments/assets/7d8c2c98-3164-4e25-8dfb-792da7fa881b" width="1000"/>
+
+
+
+**클러스터 기반 지역분석 상관관계 시각화**
+
+  <img src="https://github.com/user-attachments/assets/53b17ae3-bc73-4a3b-92df-52d2dbdb97a2" width="1000"/>
+
+
+
+**클러스터 기반 지역분석 변수 중요도 시각화**
+
+  <img src="https://github.com/user-attachments/assets/8bfa3e36-6e81-434a-a9a5-ef8dda693edb" width="1000"/>
+
+
+
+**클러스터 기반 지역분석을 통한 인사이트 제공**
+
+  <img src="https://github.com/user-attachments/assets/d9339edf-cead-4407-8970-bc3022845ac1" width="1000"/>
+
+
+
+**인사이트 기반 제고관리**
+
+  <img src="https://github.com/user-attachments/assets/664fcf20-5fa7-4524-9554-16eb1f87f17b" width="1000"/>
+
+
+
+**인사이트 기반 제고관리**
+
+  <img src="https://github.com/user-attachments/assets/664fcf20-5fa7-4524-9554-16eb1f87f17b" width="1000"/>
+
+
+
+**인사이트 기반 제고관리**
+
+  <img src="https://github.com/user-attachments/assets/82103138-959c-4064-bcf1-b207d9218341" width="1000"/>
+
+
+
 
 📷 *추천 이미지: 사용자 위치 기반 클러스터 맵 + 예측 UI 설계안*
 
