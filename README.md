@@ -1,7 +1,10 @@
 # 6조 기계학습 프로젝트 - 매출 예측을 위한 군집 기반 분석
 
-팀원 :
-
+### 👥 팀원
+- 신승민  
+- 신창영  
+- 임성훈  
+- 임지성  
 ---
 
 ## 📌 프로젝트 개요
@@ -23,8 +26,9 @@
   - 좌표 기반 시각화
   - 버스역 + 지하철역 통합 산점도 생성
 
-![역 산점도](images/station_scatter_plot.png)  
-> 그림 1. 서울 시내 7477개 역의 분포를 지도 위에 시각화한 결과
+<img src="https://github.com/user-attachments/assets/9a71cf1d-65fb-4cef-8dc6-afb40f4b2c55" width="1000"/>
+
+> 🡆  서울 시내 7477개 역의 분포를 지도 위에 시각화한 결과
 
 ---
 
@@ -37,21 +41,28 @@
   - 엘보우 기법 기준: inertia가 완만해지는 지점 ≈ K=25 이상
   - 실루엣 계수 기준: 최대값 K=2550 → 과적합 우려
 
-![군집화 시각화](images/kmeans_cluster_result.png)  
-> 그림 2. K-Means로 군집화한 7477개의 역. 각 색상은 서로 다른 군집을 나타냄.
 
-![엘보우 기법](images/elbow_method.png)  
-> 그림 3. 엘보우 기법을 사용한 inertia 분석. K값이 약 25 이상부터 효과 감소.
+<img src="https://github.com/user-attachments/assets/d02fce3b-2e23-4b4e-bdd1-dc7d2b386dbb" width="400"/>
 
-![실루엣 계수](images/silhouette_score.png)  
-> 그림 4. K값에 따른 실루엣 계수. 2550일 때 가장 높지만, 해석 가능성 낮음.
+> 🡆  K-Means로 군집화한 7477개의 역. 각 색상은 서로 다른 군집을 나타냄.
+
+
+<img src="https://github.com/user-attachments/assets/f72e22df-e922-4c57-b176-93ea6b648344" width="600"/>
+
+> 🡆  엘보우 기법을 사용한 inertia 분석. K값이 약 25 이상부터 효과 감소.
+
+
+<img src="https://github.com/user-attachments/assets/1507169e-d6a1-4a84-b0a8-1da70c4f2a85" width="600"/>
+
+> 🡆  K값에 따른 실루엣 계수. 2550일 때 가장 높지만, 해석 가능성 낮음.
 
 - **최적 K 값 결정**
   - 최종 군집 수: K=259
   - 이유: 많은 군집을 통합하면서도 유의미한 상관관계 확보
 
-![K=259 군집화 결과](images/kmeans_259.png)  
-> 그림 5. 최종 선정된 K=259일 때의 군집화 결과. 변수 간 상관관계 개선됨.
+<img src="https://github.com/user-attachments/assets/0ad2a4c0-e216-4b2c-aa3b-04187b61466c" width="600"/>
+
+> 🡆  최종 선정된 K=259일 때의 군집화 결과. 변수 간 상관관계 개선됨.
 
 ---
 
@@ -78,23 +89,86 @@
 | Baseline (선형 회귀)*10^9 | 3.79266662887 |
 | 프로젝트 모델 (스택킹)*10^9  | 0.00899928144 |
 
-![모델 성능 비교](images/rmsle_comparison.png)  
-> 그림 6. RMSLE 성능 비교. 프로젝트 모델이 실제 상황에 더 적합한지 추가 해석 필요
+
+---
+## 🧹 데이터 전처리 및 피처 엔지니어링
+
+- **0의 값을 1e-5로 대체**하여 로그 스케일 계산의 안정성 확보  
+- **시간당 유동인구 증가율**: (i+1시 유동인구) / (i시 유동인구)  
+- **시간당 유동인구 증가값**: (i+1시 유동인구) - (i시 유동인구)  
+- 두 피처는 모델이 시간에 따른 유동인구 변화 추이를 효과적으로 학습할 수 있게 도움
 
 ---
 
-## 🧰 기술 스택
+## 🤖 모델링 및 스택킹
+
+### ✅ 사용 모델:
+- 선형 회귀 (Linear Regression)
+- 랜덤 포레스트 (Random Forest)
+- LightGBM
+- XGBoost
+
+### 🔁 스택킹 방식:
+- 각 베이스 모델로 5-Fold 교차검증 수행 → 총 20개의 예측 테이블 생성
+- 최종 예측은 **선형 회귀를 베타 모델로 사용**하여 앙상블 수행
+
+---
+
+## 📊 성능 비교 시각화
+
+- **평가 지표:**
+  - MSE (Mean Squared Error)
+  - RMSE (Root Mean Squared Error)
+  - RMSLE (Root Mean Squared Log Error)
+  - R² (결정계수)
+
+- **결과:**  
+  베이스라인인 단일 선형회귀보다 **스택킹 모델이 전반적으로 성능 우수**,  
+  특히 RMSLE 기준으로 향상 폭이 두드러짐
+
+
+<img src="https://github.com/user-attachments/assets/8de91cd8-699a-43c4-925a-56a5c9b926a4" width="600"/>
+
+> 🡆  선형 회귀와 스택킹 모델의 성능 차이 (RMSLE 기준 약 27% 향상)
+
+---
+
+## 📈 인사이트 예시
+
+- **클러스터 100 **  
+  - 평균연령: 서울 2위 (50~60대 중심)
+  - 매출 영향 변수: **60대 이상 비율**, **요일(수요일)**  
+  → 수요일엔 재고 확보 및 인력 증강 전략 추천
+
+
+<img src="https://github.com/user-attachments/assets/1b5a4b5f-9050-439d-baa2-649957566973" width="600"/>
+
+> 주요 연령대와 매출 상관관계 도출 사례
+
+
+<img src="https://github.com/user-attachments/assets/77bed500-30ad-4837-894b-ac7cdf4fa934" width="600"/>
+
+> 주요 연령대와 매출 종요도 도출 사례
+
+---
+
+## 🖥️ 웹사이트 UI (시안)
+
+- 사용자의 위치 입력 → 해당 클러스터 자동 예측  
+- 예측 결과 및 관련 인사이트 시각화 제공  
+- 예: 특정 요일의 재고 보충, 인력 배치 추천 등  
+
+
+<img src="https://github.com/user-attachments/assets/3a15c426-462a-4cf0-9356-352a3859c940" width="600"/>
+
+> 🡆  사용자 위치 기반 매출 예측 웹 인터페이스 시안
+
+---
+
+## 🛠️ 기술 스택
 
 - **프레임워크**: Scikit-Learn
 - **라이브러리**: Numpy, Pandas
 - **개발환경**: Google Colab
-
----
-
-## 🎯 최종 목표
-
-- 학습된 모델을 웹사이트 형태로 배포
-- 매출과 높은 상관관계를 가지는 변수에 대한 인사이트 제공
-- 자영업자들의 매출 향상에 도움을 주는 서비스 구축
 
 
