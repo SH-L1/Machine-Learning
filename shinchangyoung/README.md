@@ -103,7 +103,7 @@ K를 줄였을 때 상관관계가 증가
 - **LightGBM**  
 
   최적의 파라미터  
-  <img src="https://github.com/user-attachments/assets/3c203a71-082d-4175-a216-5a323e1ce9a8" width="600"/>
+  <img src="https://github.com/user-attachments/assets/056df880-aedb-48ae-beb5-57bea6fa0090" width="600"/>
 
   실제값 - 예측값 시각화  
   <img src="https://github.com/user-attachments/assets/2ea05277-a691-464e-b707-93d614aa9dbe" width="600"/>
