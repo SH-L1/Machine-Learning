@@ -80,7 +80,7 @@ K를 줄였을 때 상관관계가 증가
 
 ### 🔧 적용 알고리즘
 
-- **선형 회귀 / RandomForest**
+- **RandomForest**
   
   최적의 파라미터 설정  
   <img src="https://github.com/user-attachments/assets/c1f77d51-f3ca-49ae-a9c2-0b48ffa565f9" width="600"/>
@@ -95,12 +95,18 @@ K를 줄였을 때 상관관계가 증가
   최적의 파라미터  
   <img src="https://github.com/user-attachments/assets/bd076ff7-1b60-4f7e-863e-f5439131d12c" width="600"/>
 
+  실제값 - 예측값 시각화  
+  <img src="https://github.com/user-attachments/assets/c9fa5e8f-30d5-427e-9530-497c25658e6b" width="600"/>
+
 ---
 
 - **LightGBM**  
 
   최적의 파라미터  
   <img src="https://github.com/user-attachments/assets/3c203a71-082d-4175-a216-5a323e1ce9a8" width="600"/>
+
+  실제값 - 예측값 시각화  
+  <img src="https://github.com/user-attachments/assets/2ea05277-a691-464e-b707-93d614aa9dbe" width="600"/>
 
 ---
 
