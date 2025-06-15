@@ -166,43 +166,43 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
 
 **사용자위치 위치 포함한 군집 시각화**
 
-  <img src="https://github.com/user-attachments/assets/7d8c2c98-3164-4e25-8dfb-792da7fa881b" width="600"/>
+  <img src="https://github.com/user-attachments/assets/7d8c2c98-3164-4e25-8dfb-792da7fa881b" width="1000"/>
 
 ---
 
 **클러스터 기반 지역분석 상관관계 시각화**
 
-  <img src="https://github.com/user-attachments/assets/53b17ae3-bc73-4a3b-92df-52d2dbdb97a2" width="600"/>
+  <img src="https://github.com/user-attachments/assets/53b17ae3-bc73-4a3b-92df-52d2dbdb97a2" width="1000"/>
 
 ---
 
 **클러스터 기반 지역분석 변수 중요도 시각화**
 
-  <img src="https://github.com/user-attachments/assets/8bfa3e36-6e81-434a-a9a5-ef8dda693edb" width="600"/>
+  <img src="https://github.com/user-attachments/assets/8bfa3e36-6e81-434a-a9a5-ef8dda693edb" width="1000"/>
 
 ---
 
 **클러스터 기반 지역분석을 통한 인사이트 제공**
 
-  <img src="https://github.com/user-attachments/assets/d9339edf-cead-4407-8970-bc3022845ac1" width="600"/>
+  <img src="https://github.com/user-attachments/assets/d9339edf-cead-4407-8970-bc3022845ac1" width="1000"/>
 
 ---
 
 **인사이트 기반 제고관리**
 
-  <img src="https://github.com/user-attachments/assets/664fcf20-5fa7-4524-9554-16eb1f87f17b" width="600"/>
+  <img src="https://github.com/user-attachments/assets/664fcf20-5fa7-4524-9554-16eb1f87f17b" width="1000"/>
 
 ---
 
 **인사이트 기반 제고관리**
 
-  <img src="https://github.com/user-attachments/assets/664fcf20-5fa7-4524-9554-16eb1f87f17b" width="600"/>
+  <img src="https://github.com/user-attachments/assets/664fcf20-5fa7-4524-9554-16eb1f87f17b" width="1000"/>
 
 ---
 
 **인사이트 기반 제고관리**
 
-  <img src="https://github.com/user-attachments/assets/82103138-959c-4064-bcf1-b207d9218341" width="600"/>
+  <img src="https://github.com/user-attachments/assets/82103138-959c-4064-bcf1-b207d9218341" width="1000"/>
 
 ---
 
