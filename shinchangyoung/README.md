@@ -91,7 +91,7 @@ k값이 올라갈수록 같이 커진다는 점을 확인 후 이 두개의 좌�
   최적의 파라미터 설정  
   <img src="https://github.com/user-attachments/assets/c1f77d51-f3ca-49ae-a9c2-0b48ffa565f9" width="600"/>
 
-  ### 실제값 - 예측값 시각화  
+  실제값 - 예측값 시각화  
   <img src="https://github.com/user-attachments/assets/5db7ca2f-771c-4f24-bc8e-771aec58b752" width="600"/>
 
 
